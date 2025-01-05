@@ -1,0 +1,6 @@
+openai
+chromadb
+google-generativeai
+streamlit
+docling
+chonkie[all]
