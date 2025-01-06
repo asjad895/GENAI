@@ -83,3 +83,9 @@ Go to GENAI
    streamlit run relclassifier_app.py
 
 3. Access Url
+
+
+## Experiments
+check
+```bash
+Research/experiments.ipynb

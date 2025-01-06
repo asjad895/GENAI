@@ -1,3 +1,5 @@
+# Not using now, this does not support pdf upload via api- got error
+
 import google.generativeai as genai
 import RAG.parameters as parameters
 import CustomException

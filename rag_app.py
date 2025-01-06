@@ -73,6 +73,10 @@ def main():
             nonlocal bot_response
             try:
                 # Run retrieval and query expansion pipeline
+
+                # selects only last 3 turn 
+                if len(st.session_state.chat_history)>6:
+                    st.session_state.chat_history = st.session_state.chat_history[-6:]
                 chunks, rephrased_query, system = await utils.retrieval_with_query_expansion(
                     user_message=user_input,
                     prev_conversation=st.session_state.chat_history,

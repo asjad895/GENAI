@@ -64,3 +64,10 @@ Go to GENAI
    streamlit run tool_sel_app.py
 
 3. Access Url
+
+
+## Experiments
+check
+```bash
+Research/experiments.ipynb
+

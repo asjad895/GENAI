@@ -1,7 +1,10 @@
 import traceback
-import os
-import sys
-async def handle_exception(exception : Exception):
+from typing import Dict
+
+async def handle_exception(
+        exception : Exception
+        ) ->Dict:
+    
     exception_type = type(exception).__name__
     exception_message = str(exception)
     exception_traceback = traceback.extract_tb(exception.__traceback__)
