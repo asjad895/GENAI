@@ -49,9 +49,10 @@ def main():
                     else:
                         # Display the content of the response
                         response = asyncio.run(tool_model.get_json(tool_sel.choices[0].message.content))
-                        if not isinstance(response, Dict):
+                        if 'error' not in response:
                             st.write(f"**Tool:** {response.get('tool')}")
                             st.write(f"**Params:** {response.get('arguments')}")
+                        # print(response)
                         st.write(f"**Response Content:** {tool_sel.choices[0].message.content}")
 
                 except Exception as e:

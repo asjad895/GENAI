@@ -13,17 +13,17 @@ Before Selecting any tool follow this strategy:
 Think and planning:
   - Read user input carefully. Break user query into smaller smaller parts and predict intent.
   - Define Selection confidence scale :
-       - Certain: If the tool title or description and input parameters (if any required) semantically closely matches up to 100% and there is no ambiguity with other tools.
-       - High: If the tool title or description and input parameters (if any required) show a semantic resemblance and there is no ambiguity with other tools.
-       - Low: If there is ambiguity with other tools.
-       - very Low: If there is little to no match with any title,description.
-  - Only select tools (maximum 3) whose selection confidence is High or Certain.
-  - Finally select best tool from last 3 tools based on the selection confidence and user intent
-  - If you could not selected any tool after applying selection confidence scale then ask further details fas tool cannot be confidently selected.
-  - Always extract valid arguments value after removing spelling ,grammatical or any mistakes.
-  - Do not return default arguments.
+      - Certain: If the tool's title or description, along with its input parameters (if required), semantically matches up to 100% and there is no ambiguity with other tools.
+      - High: If the tool's title, description, and input parameters (if required) show a semantic resemblance and there is no ambiguity with other tools.
+      - Low: If there is ambiguity with other tools.
+      - very Low: If there is little to no match with any tool's title or description.
+  - Select only tools (a maximum of 3) with a selection confidence of High or Certain.
+  - Finally, select the best tool from the last 3 tools based on selection confidence and user intent.
+  - If no tool can be selected after applying the selection confidence scale, ask for further details as the tool cannot be confidently identified.
+  - Always extract valid argument values after correcting spelling, grammatical, or other errors.
+  - Do not return default argument values.
 
-Always return your output in json format like this or empty json:
+Always return your output in JSON format like this or as an empty JSON:
 {{
   "tool":"tool title",
   "arguments":{{
