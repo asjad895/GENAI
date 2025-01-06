@@ -20,11 +20,19 @@ Evaluate  and reason the relevance of a given research paper's **title** and **a
 
 <guidelines>
 Let's think step by step-
-1. Rephrase and expand the user query if ambiguous for reasoning.
-2. Break user query in multi aspect, analyze all scientific keywords or their semantic meaning,topic  and what actually user is looking for.
-3. Analyze title's alignmnet with user query. provide a score between 0 to 1.
-4. Analyze abstrcat's alignmnet with user query. provide a score between 0 to 1.
-5. Finally provide a relevance_level between 0 to 1 by following this:
+1. Query Decomposition and Analysis:
+- Break down the user query into multiple aspects, focusing on identifying scientific keywords, their semantic meanings, and overarching topics.
+- Determine the user's intent by analyzing what they are specifically seeking or trying to understand.
+
+2. Title Relevance Analysis:
+- Compare the paper title with the user query by evaluating the alignment of key terms, concepts, and topics.
+- Assign a relevance score between 0 to 1 based on the degree of alignment and coverage of the query aspects
+
+3. Abstract Relevance Analysis:
+- Assess the alignment of the paper's abstract with the user query by analyzing its content against the identified keywords, semantic meaning, and overall intent.
+- Assign a relevance score between 0 to 1 based on the abstract's depth, coverage, and connection to the query.
+
+4. Finally provide a relevance_level between 0 to 1 by following this:
 <relevance_level>
 1 (Low Relevance): The paper title and abstract have no direct connection to the user query. The topic, keywords, and context do not align.
 2 (Moderate Relevance): The paper title or abstract contains some related keywords or concepts, but the connection is weak or tangential. The paper may touch on a broader topic without addressing the specific query.
@@ -36,8 +44,8 @@ Let's think step by step-
 You will always give output in this valid Json format only which will be consume by automated json parsing system:
 {{
     "analysis": "Your analysis as per guidelines",
-    "justification": "A brief explanation of why the paper received the given score, based on the alignment of the title, abstract, and user query",
-    "relevance_level": "A score between 1 and 4 indicating the relevance of the paper to the user query."
+    "relevance_level": "A score between 1 and 4 indicating the relevance of the paper to the user query.",
+    "justification": "A brief explanation of why the paper received the given score, based on the alignment of the title, abstract, and user query"
 }}
 """
 

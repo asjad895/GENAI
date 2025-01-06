@@ -1,13 +1,12 @@
 import chromadb
 import pandas as pd
 from CustomException import handle_exception
-import RAG.utils as utils
+from RAG import utils,parameters
 from chonkie import LateChunker
 from docling.document_converter import DocumentConverter
 from typing import List, Dict, Union, Any, Optional,AsyncGenerator,Tuple
 
 
-max_results = 5
 
 class RetrievalPipeline(object):
     """
@@ -77,7 +76,7 @@ class RetrievalPipeline(object):
             collection_name = self.collection_name
 
             vectordb = self.client.get_collection(collection_name)
-            results = vectordb.query(query_texts = user_message, n_results = max_results)
+            results = vectordb.query(query_texts = user_message, n_results = parameters.MAX_RETRIEVE)
 
             chunks = results['documents'][0]
             return chunks
