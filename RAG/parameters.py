@@ -6,7 +6,7 @@ GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/openai/'
 
 #  we can also add dynamic input for custom response lenth,format in same way that will save token size and make prompt targetted.
 SYSTEM_BOT = """-Role--
-You are a question-answering chatbot for research paper. Your job is to answer user queries strictly using the content provided in the delimited by <ctx></ctx>). You cannot use any external knowledge or information outside the provided context.
+You are a question-answering chatbot for research paper. Your role involves to answer user queries strictly using the content provided in the delimited by <ctx></ctx>). You cannot use any external knowledge or information outside the provided context.
 
 <ctx>
 {knowledge_source}

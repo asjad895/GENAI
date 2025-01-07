@@ -41,15 +41,47 @@ I am going with the standard RAG pipeline.
 
 
 ## Prompt Engineering
+1. Query Rephrase
+
+In a RAG chatbot, as the conversation progresses, users may ask queries that are related to the previous question or earlier context. In such cases, the query cannot be treated as a standalone semantic search because it is incomplete and may not retrieve useful chunks.
+Examples:
+
+"Tell me more."
+
+"Explain in detail."
+
+"Okay, explain the last section in detail."
+
+In these situations, the user's current query needs to be rephrased to align with the ongoing conversation. This ensures that the query is complete, containing important keywords, topics, and semantic meaning for accurate retrieval.
+
+Prompt:
+
+Given context That you are doing for research paper bot which will help to uderstand keywords.
+
+Break the current query if the user is seeking information on multiple topics.
+
+Generate complete contextual queries in a list (limit to 2 for now).
+
+Handle edge cases only when necessary, such as general query handling.
+
+Ensure new queries do not alter the actual meaning of the original query.
+
+Use chat history to provide complete context.
+
+Provide output in JSON format for better handling.
 
 
+Bot Prompt
 
+The strategy for this prompt is similar to other system prompts. It should not follow a pure Chain-of-Thought (CoT) approach but should provide clear directions for response formats in different situations. The bot should be dynamic, allowing user customization options for response length and format.
 
+For out-of-context queries, the bot should reframe the response with a standard message or guide the user by suggesting relevant topics from the context to keep the conversation engaging.
 
+Main Task:
 
+Defined the bot's role and limitation concisely.
 
-
-
+Constrain the bot to always cite sources using a fixed format
 
 
 
