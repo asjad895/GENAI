@@ -27,7 +27,6 @@ I am going with the standard RAG pipeline.
 
 - **Drawback of the Current Method:**
   - Loss of image content from the PDF.
-  - Retention of tables and other elements.
 
 - **Alternative Approach:**
   - Directly upload the PDF and use the `genai.generate_content` function for chat interactions.
@@ -73,7 +72,7 @@ Provide output in JSON format for better handling.
 
 Bot Prompt
 
-The strategy for this prompt is similar to other system prompts. It should not follow a pure Chain-of-Thought (CoT) approach but should provide clear directions for response formats in different situations. The bot should be dynamic, allowing user customization options for response length and format.
+The strategy for this prompt is similar to other system prompts. It is not following pure Chain-of-Thought (CoT) approach but should provide clear directions for response formats in different situations. The bot should be dynamic, allowing user customization options for response length and format.
 
 For out-of-context queries, the bot should reframe the response with a standard message or guide the user by suggesting relevant topics from the context to keep the conversation engaging.
 

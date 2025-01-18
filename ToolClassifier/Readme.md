@@ -7,7 +7,7 @@
 4. Tools Formatting:
    - As LLm Can select tool but when we have a lot of arguments then passing pydantic schema helps model to better understand all the requirements, with clear description of parameters, type of data etc.
 
-   - Giving Tool name then Their rich Information Description (As of now , we should extensively test for refeine)
+   - Giving Tool name then Their rich Information Description (As of now , we should extensively test for refine)
 
    - Ex:
    ![tool formatting for system prompt](results/Screenshot%20from%202025-01-06%2012-56-38.png)
