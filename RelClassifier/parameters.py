@@ -49,7 +49,7 @@ You will always give output in this valid Json format only which will be consume
 }}
 """
 
-DEEPINFRA_TOKEN = 'cN884kkoxYBSI3lMcTwqGz95k79WVZXH'
+DEEPINFRA_TOKEN = ''
 DEEP_INFRA_BASE_URL = 'https://api.deepinfra.com/v1/openai'
 
 TEMPERATURE = 0.5

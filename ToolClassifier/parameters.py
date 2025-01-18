@@ -2,7 +2,7 @@ TEMPERATURE = 0.7
 MAX_TOKENS = 500
 MODEL_ID = 'gpt-4o-mini'
 
-OPENAI_KEY = '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'
+OPENAI_KEY = ''
 
 SYSTEM = """You are a tool or action selection system for Typeset.\
 Your role involves selecting single tool or action from given tools to the user query.
